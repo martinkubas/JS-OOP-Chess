@@ -1,0 +1,72 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="styles.css">
+            <title>KOP Šach</title>
+    </head>
+    <body>
+        
+        <canvas></canvas>
+
+        
+        <div id="gametypeWrapper">
+            <div id="gametypeDiv">
+                <h3>Game Type</h3>
+                
+                    <div id="typeButtonsDiv">
+                        <div id="humanDiv">
+                            <button class="gametypeButtons" id="PVP" name="game_type" onclick="humanOpponent()"><span class="whiteText">Player<br>vs</span><br>Player</button>
+                        </div>
+                    
+                        <div id="aiDiv">
+                            <button class="gametypeButtons" id="PVE" name="game_type" onclick="robotOpponent()"><span class="whiteText">Computer<br> vs</span><br>Player</button>  
+                            <div id="difficultyDiv">
+                                <button id="easy" class="difficultyButtons" name="difficulty" onclick ="(()=> localStorage.setItem('difficulty', 'easy'))()">Easy</button>
+                                <button id="medium" class="difficultyButtons" name="difficulty" onclick ="(()=> localStorage.setItem('difficulty', 'medium'))()">Medium</button>
+                            </div>
+                            
+                        </div>
+                    
+                </div>
+            
+                <div id="confirmDiv">
+                    <button id="confirmButton" onclick="(() => window.location.reload())()">Confirm</button>
+                </div>
+            </div>
+        </div>
+        <div id="textWrapper">
+            <div id="textDiv">
+                <p id="text"></p>
+            </div>
+            
+        </div>
+        
+    </body>
+
+    
+
+<script>
+    function robotOpponent(){
+        const pveButton = document.getElementById('PVE');
+        pveButton.style.display = 'none';
+        const diffdiv = document.getElementById('difficultyDiv');
+        localStorage.setItem('gameType', 'PVE');
+        diffdiv.style.display = 'flex';
+    }
+    function humanOpponent(){
+        const pveButton = document.getElementById('PVE');
+        pveButton.style.display = 'block';
+        const diffdiv = document.getElementById('difficultyDiv');
+        localStorage.setItem('gameType', 'PVP');
+        diffdiv.style.display = 'none';
+        localStorage.setItem('difficulty', '');
+    }
+</script>
+
+<script src="checkFunctions.js"></script>
+<script src="piece.js"></script><script src="evaluate.js"></script><script src="easyAI.js"></script> <script src="mediumAI.js"></script>
+<script src="board.js"></script>
+
+<script src="chess.js"></script>
+
+
+</html>

@@ -1,0 +1,156 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    margin: 0;
+    background-color: #312E2B;
+}
+#textWrapper{
+    display: flex;
+}
+#textDiv{
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+#text{
+    color: #FDFDFD;
+    font-size: 35px;
+}
+
+canvas{
+    position: relative;
+    display: flex;
+    float: left;
+    margin: 0;
+}
+#gametypediv h3{
+    background: linear-gradient(90deg, #b58863, #f0d9b5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+}
+#gametypeWrapper{
+    display: flex;
+    height: 30%;
+}
+#gametypeDiv{
+    background-color: #272522;
+    width: 50%;
+    border-radius: 10px;
+    margin-top:15px;
+    margin-left: 15px;
+}
+#difficultyDiv{
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.difficultyButtons{
+    align-items: center;
+    border: none;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 550;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.6);
+    border-radius: 5px;
+    display: block;
+    width: 35%;
+}
+#easy{
+    background: linear-gradient(120deg, #007F5F,#004030);
+    box-shadow: 2px 2px 0px 2px rgba(0, 46, 34, 0.7);
+    height: 100%;
+    margin-right: 5%;
+}
+#medium{
+    background: linear-gradient( #BC4749 ,#892B2D );
+    box-shadow: 2px 2px 0px 2px rgba(103, 38, 39, 0.7);
+    height: 100%;
+    
+}
+#typeButtonsDiv{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+}
+
+#humanDiv, #aiDiv{
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    display: flex;
+}
+.gametypeButtons{
+    border: none;
+}
+#PVP, #PVE{
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 550;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.6);
+    border-radius: 5px;
+    background: linear-gradient(180deg, #212529  40%, #FDFDFD 60%);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    line-height: 15px;
+    display: block;
+    width: 75%;
+}
+.whiteText{
+    color: #FDFDFD;
+}
+#confirmDiv{
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    display: flex;
+}
+#confirmButton{
+    border: none;
+    box-shadow: 2px 2px 0px 2px rgba(83, 113, 51, 1);
+    font-weight: 800;
+    border-radius: 5px;
+    color: #000;
+    background: #7FA650;
+    width: 50%;
+    height: 75%;
+}
+button{
+    cursor: pointer;
+}
+#confirmButton:hover{
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px 0 rgba(127, 166, 80, 0.6);
+}
+#confirmButton:active{
+    width: 47%;
+    height: 72%;
+}
+#easy:hover{
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px 0 rgba(0, 127, 95, 0.6);
+}
+#medium:hover{
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px 0 rgba(188, 71, 73, 0.6);
+}
+#easy:active, #medium:active{
+    width: 32%;
+    height: 95%;
+}
+#easy:visited, #medium:visited{
+    color: #FDFDFD;
+}
+#PVP:active, #PVE:active{
+    width: 72%;
+    height: 95%;
+}
+#PVP:hover, #PVE:hover{
+    box-shadow: 0 5px 15px 0 rgba(255, 255, 255, 0.6);
+}
